@@ -2,10 +2,12 @@ import { Provider as PaperProvider } from "react-native-paper";
 
 import Main from "./src/Main";
 
-export default function App() {
+const App = () => {
   return (
     <PaperProvider>
       <Main />
     </PaperProvider>
   );
-}
+};
+
+export default App;
