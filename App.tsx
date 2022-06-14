@@ -1,10 +1,12 @@
 import { Provider as PaperProvider } from "react-native-paper";
 
+import { paperTheme } from "./assets/theme";
+
 import Main from "./src/Main";
 
 const App = () => {
   return (
-    <PaperProvider>
+    <PaperProvider theme={paperTheme}>
       <Main />
     </PaperProvider>
   );
