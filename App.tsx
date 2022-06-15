@@ -15,10 +15,11 @@ import { paperTheme } from "./assets/theme";
 
 import Main from "./src/Main";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const App = () => {
-  const useFonts = async () =>
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+  const fetchFonts = async () => {
     await Font.loadAsync({
       Inter_300Light,
       Inter_400Regular,
@@ -26,16 +27,14 @@ const App = () => {
       Inter_600SemiBold,
       Inter_700Bold,
     });
-
-  const fetchFonts = async () => {
-    await useFonts();
+    setFontsLoaded(true);
   };
 
   useEffect(() => {
     fetchFonts();
   });
 
-  if (!fetchFonts) {
+  if (!fontsLoaded) {
     <AppLoading />;
   }
 
