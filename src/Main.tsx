@@ -3,11 +3,11 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import HomeScreen from "./screens/Home";
 import LoginScreen from "./screens/Login";
+import NewCustomerScreen from "./screens/NewCustomer";
 
 import { navigationTheme } from "../assets/theme";
 
 import { StackParams } from "../types";
-import NewCustomerScreen from "./screens/NewCustomer";
 
 const Stack = createStackNavigator<StackParams>();
 
